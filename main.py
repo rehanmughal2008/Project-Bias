@@ -1,7 +1,5 @@
 import streamlit as st
 import google.generativeai as genai
-import requests as rs
-from bs4 import BeautifulSoup 
 
 #gemini config
 genai.configure(api_key="AIzaSyCMc_G9mjk9jH7UwkquYq2-GkN5nwhdHwk")
@@ -13,13 +11,6 @@ st.set_page_config(
 )
 st.title('Project Bias')
 GLOBAL_HEIGHT = 300
-
-#global functions
-def extract_text(link):
-      page = rs.get(link)
-      soup = BeautifulSoup(page.content, 'html.parser')
-      page_text = soup.body
-      return str(page_text)
 
 #placeholder JSON
 class response:
