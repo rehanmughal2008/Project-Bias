@@ -7,7 +7,8 @@ model = genai.GenerativeModel("gemini-1.5-flash")
 
 #Page Config
 st.set_page_config(
-    page_title="Project Bias"
+    page_title="Project Bias",
+    page_icon="🚩"
 )
 st.title('Project Bias')
 GLOBAL_HEIGHT = 300
